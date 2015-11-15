@@ -1,17 +1,22 @@
-<html>
-	<head>
-		<title>Blog da Babi</title>
-	</head>
-	<body>
-		<h1>Seja bem vinda(o) ao blog da Babi! :)</h1>
+{% extends "blog/base.html" %}
 
-		<div>
-			<h2><a href="http://127.0.0.1:8000/admin/blog/post/1/">Meu primeiro post</a></h2>
+{% block content %}
+	<div class="content container">
+		<div class="row">
+			<div class="col-md-8">
+				{% for post in posts %}
+					<div class="post">
+						<h1><a href="{% url "blog.views.post_detail" pk=post.pk %}">{{ post.title }}</a></h1>
+						<h5>published: {{ post.published_date }}</h5>
+						<h4>{{ post.text|linebreaks }}</h4>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-3" id="sidebar">
+				<h2>Sobre mim</h2>
+			</div>
 		</div>
-
-		<div>
-			<h2><a href="http://127.0.0.1:8000/admin/blog/post/2/">Meu segundo post</a></h2>
-		</div>
-
-	</body>
-</html>
+	</div>
+{% endblock content %}
