@@ -8,8 +8,13 @@ color: #F60B79;
 font-size: 36pt;
 text-decoration: none;
 }
+
+.page-header small{
+font-size: 15px;
+line-height: 250%;
+}
 .content {
-margin-left: 40px;
+margin-left: 10px;
 }
 h1, h2, h3, h4 {
 font-family: 'Lobster', cursive;
@@ -50,7 +55,18 @@ margin-left: 10px;
 font-size: 30px;
 font-family: 'Dosis';
 }
+.post-detail{
+font-size: 30px;
+font-family: 'Dosis';
+text-align: justify;
+}
 #sidebar{
 background-color: #EAEAEA;
-padding: 20px 100px 300px 20px;
+padding: 20px 20px 30px 20px;
+text-align: justify;
+}
+
+.about_image
+{
+fill: red;
 }

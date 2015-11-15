@@ -1,5 +1,11 @@
 {% extends "blog/base.html" %}
+{% load staticfiles %}
 
+	<div class="page-header">
+		{% block header %}
+			<h1><a href="/">Blog da Babi!</a></h1>
+		{% endblock %}
+	</div>
 {% block content %}
 	<div class="content container">
 		<div class="row">
@@ -16,6 +22,9 @@
 			</div>
 			<div class="col-md-3" id="sidebar">
 				<h2>Sobre mim</h2>
+				<p>Sou graduanda em Engenharia civil na UNICAMP, Pythonista, membro do Pyladies Campinas, programadora nas horas vagas</p>
+				<br>
+				<img class="about_image" src="{% static "img/oculos.svg" %}" width="100%">
 			</div>
 		</div>
 	</div>
